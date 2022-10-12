@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+.filter-container {
+  border: 1px solid rgb(206, 204, 204);
+}
+.title {
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.filters {
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 1.5rem;
+  padding-right:  1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.filters:hover {
+ color: rgb(205, 4, 4);
+}
+.cat-icon{
+    font-size: 25px;
+}
+.cat{
+  display: none;
+}
+.filters:hover .cat{
+    display: block;
+}
+.filter-name{
+  font-size: 14px;
+  font-family: Avenir-Roman;
+  display: none;
+  width: 100%;
+  padding: 1.5rem 2rem 0rem 2rem;
+}
+

@@ -1,0 +1,22 @@
+.about-content{
+    padding: 0 20px;
+    font-size: 14px;
+}
+.info{
+    justify-content: center;    
+}
+.info>:only-child{
+    font-size: 14px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.icon-info{
+    font-weight: 300;
+    color: rgb(205, 8, 8);
+    font-size: 37px;
+    margin-bottom: 5px;
+}
+.bor-der-right{
+    border-right: 2px solid grey;
+}

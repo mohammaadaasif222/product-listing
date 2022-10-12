@@ -1,0 +1,31 @@
+.card{
+   margin: auto;
+   border: none !important;
+}
+
+
+.product-name{
+   font-size: 14px;
+}
+.product-price{
+font-size: 14px;
+}
+.product-name:hover{
+   cursor: pointer;
+   color: brown;
+   text-decoration: underline;
+}
+
+.card:hover .details{
+   border: 1px solid rgb(211, 211, 211);
+}
+.product-size{
+   font-size: 14px;
+   visibility: hidden;
+}
+.details:hover .product-size{
+   visibility: visible;
+}
+
+
+
