@@ -1,7 +1,8 @@
 import React from "react";
 import "../About/About.css";
 import { BsArrowClockwise,BsWallet,BsTruck } from "react-icons/bs";
-const About = () => {
+const About = (props) => {
+
   return (
     <>
     <hr/>

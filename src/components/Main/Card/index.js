@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Card.css";
 
 const Card = (props) => {
@@ -6,9 +7,10 @@ const Card = (props) => {
     <div className="col-md-3 p-3 card">
       <img src={props.children.image} alt={props.children.name}></img>
       <div className="details p-2">
-        <p className="product-name">{props.children.name}</p>
+        <Link to="/single-card"><p className="product-name">{props.children.name}</p></Link>
         <p className="product-price m-0">Rs. {props.children.price}</p>
         <p className="product-size m-0">Size- {props.children.size[1]}</p>
+        <p className="">Size- {props.children.id_product}</p>
       </div>
     </div>
   );

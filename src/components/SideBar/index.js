@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "./sidebar.css";
 import { RiArrowDropUpLine } from "react-icons/ri";
 
-const SideBar = () => {
+const SideBar = (props) => {
   const [isActive, setIsActive] = useState(false);
   const showButtons = () => {
     setIsActive((current) => !current);
   };
+  // console.log(props.data);
   return (
     <div className="col-md-3 pt-5 pl-5">
       <div className="filter-container">

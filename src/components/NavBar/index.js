@@ -12,7 +12,7 @@ function NavBar() {
   return (
     <Navbar className="bor-der p-3 nav-fix" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">MOHAMMAD</Navbar.Brand>
+        <Navbar.Brand href="/">MOHAMMAD</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
