@@ -1,11 +1,12 @@
 import React from "react";
 import "../ItemBar/itembar.css";
 const ItemBar = (props) => {
+
   return (
     <>
       <div className="container filter-box">
         <div className="row">
-          <div className="col-md-6">18 Item</div>
+          <div className="col-md-6">{props.data}</div>
           <div className="col-md-6 text-right">
             <select className="item-bar" name="filter" id="filter">
               <option value="newest">Newest</option>

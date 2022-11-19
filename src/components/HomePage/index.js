@@ -17,7 +17,7 @@ const HomePage = () => {
     fetch(API)
       .then((response) => response.json())
       .then((data) => {
-        setData(data);
+        setData(data.result);
       })
       .catch((error) => {
         console.log(error);
@@ -31,7 +31,7 @@ const HomePage = () => {
       </div>
       <div className="row mt-5">
         <SideBar data={data} />
-       {data ? null : <Main data={data.result} /> }
+        <Main data={data} />;
       </div>
       <About data={data} />
       <Footer />

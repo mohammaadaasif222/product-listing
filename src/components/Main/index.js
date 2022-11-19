@@ -1,17 +1,14 @@
-import  React from "react";
-import {useState } from "react";
+import React, { useState } from "react";
 import "./Main.css";
 import ItemBar from "./ItemBar";
-import Card from './Card'
+import Card from "./Card";
 
 const Main = (props) => {
-  console.log(props.data?.products);
-  const [items, setItems] = useState()
   return (
     <div className="col-md-9 mt-5">
-      <ItemBar/>
+      <ItemBar data={props.data.count} />
       <div className="row">
-        {items.map((item ,index) =><Card key={index} >{item}</Card>)}
+        {props.data.products ? props.data.products.map((item, index) => <Card key={index}>{item}</Card>) : null}
       </div>
     </div>
   );
