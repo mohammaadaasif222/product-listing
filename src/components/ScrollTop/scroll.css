@@ -1,5 +1,5 @@
 .top{
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     position: fixed; 
@@ -15,4 +15,5 @@
 .top-arrow{
     font-size: larger;
     font-weight: 700;
+    width: 2rem !important;
 }

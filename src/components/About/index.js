@@ -2,13 +2,13 @@ import React from "react";
 import "../About/About.css";
 import { BsArrowClockwise,BsWallet,BsTruck } from "react-icons/bs";
 const About = (props) => {
-
+  console.log(props.data);
   return (
     <>
     <hr/>
       <div className="container-fluid">
         <div className="about-content">
-         {props.data.description}
+         {/* {props.data.description ? null : props.data.description } */}
         </div>
       </div>
       <div className="container-fluid p-5">
