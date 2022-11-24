@@ -21,8 +21,6 @@ const ScrollTop = () => {
       window.scrollTo({
         top: 0, 
         behavior: 'smooth'
-        /* you can also use 'auto' behaviour
-           in place of 'smooth' */
       });
     };
     
@@ -30,7 +28,7 @@ const ScrollTop = () => {
 
   return (
     <button className='btn btn-danger top' onClick={scrollToTop} 
-    style={{display: visible ? 'inline' : 'none'}}><ImArrowUp className='top-arrow'/></button>
+    style={{display: visible ? 'block' : 'none'}}><ImArrowUp className='top-arrow'/></button>
   )
 }
 export default ScrollTop;

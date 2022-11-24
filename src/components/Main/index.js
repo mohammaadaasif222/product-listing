@@ -4,7 +4,6 @@ import ItemBar from "./ItemBar";
 import Card from "./Card";
 
 const Main = (props) => {
-  console.log(props.data);
   return (
     <div className="col-md-9 mt-5">
       <ItemBar data={props.data.count} />

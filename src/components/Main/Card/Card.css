@@ -2,10 +2,9 @@
    margin: auto;
    border: none !important;
 }
-
-
 .product-name{
    font-size: 14px;
+   color: #000;
 }
 .product-price{
 font-size: 14px;
@@ -17,7 +16,7 @@ font-size: 14px;
 }
 
 .card:hover .details{
-   border: 1px solid rgb(211, 211, 211);
+   border: 1px solid rgba(211, 211, 211, 0.262);
 }
 .product-size{
    font-size: 14px;
