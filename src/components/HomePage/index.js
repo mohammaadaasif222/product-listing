@@ -31,7 +31,7 @@ const HomePage = () => {
         <SideBar data={data.result} />
         <Main data={data.result} />;
       </div> 
-     <About data={data.result} /> 
+      <About/> 
       <Footer />
       <ScrollTop />
       <CopyRight />

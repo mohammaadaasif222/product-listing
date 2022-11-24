@@ -9,11 +9,15 @@ import { getData } from "../../redux/features/dataSlice";
 
 const SingleCard = () => {
   const { data, loading } = useSelector((state) => state.data);
-  console.log(data.result);
+ 
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getData());
   }, []);
+
+  if (data === undefined || loading) {
+    return <h1 className="text-center">Loading...</h1>;
+  }
   return (
     <div className="container-fluid">
       <div className="row ">

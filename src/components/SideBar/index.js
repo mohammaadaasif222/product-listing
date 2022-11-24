@@ -2,7 +2,6 @@ import React from "react";
 import "./sidebar.css";
 
 const SideBar = (props) => {
-  console.log(props.data.filters);
   return (
     <div className="col-md-3 pt-5 pl-5">
       <div className="filter-container">

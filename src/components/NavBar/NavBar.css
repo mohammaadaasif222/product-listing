@@ -25,12 +25,15 @@ font-weight: bolder !important;
 #navbarScrollingDropdown:hover{
     color: rgb(205, 4, 4) !important;
 }
+#navbarScrollingDropdown:hover .dropdown-content{
+    display: block;
+}
 
 .dropdown-menu{
  font-size: 10px !important;
- background: rgba(0, 0, 0, 0.79) !important;
+ background: #fff !important;
 }
 .dropdown-menu a{
- color:#fff !important;
+ color:rgb(4, 4, 4) !important;
  font-weight: bold;
 }

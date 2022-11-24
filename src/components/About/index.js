@@ -1,14 +1,17 @@
 import React from "react";
 import "../About/About.css";
 import { BsArrowClockwise,BsWallet,BsTruck } from "react-icons/bs";
-const About = (props) => {
-  
+import {useSelector } from "react-redux";
+
+
+const About = () => {
+  const { data } = useSelector((state) => state.data);
   return (
     <>
     <hr/>
       <div className="container-fluid">
         <div className="about-content">
-         {props.data.description.replace(/<[^>]+>/g, '')}
+         {data.result.description}
         </div>
       </div>
       <div className="container-fluid p-5">
