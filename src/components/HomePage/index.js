@@ -10,9 +10,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../../redux/features/dataSlice";
 
 const HomePage = () => {
- 
   const { data, loading } = useSelector((state) => state.data);
- 
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getData());
@@ -21,17 +20,19 @@ const HomePage = () => {
   if (data === undefined || loading) {
     return <h1 className="text-center">Loading...</h1>;
   }
-  
+
   return (
     <div className="container-fluid">
       <div className="row ">
         <NavBar />
       </div>
-       <div className="row mt-5">
-        <SideBar data={data.result} />
-        <Main data={data.result} />;
-      </div> 
-      <About/> 
+      <div className="container-fluid pl-5 pr-5">
+        <div className="row mt-5">
+          <SideBar data={data.result} />
+          <Main data={data.result} />;
+        </div>
+      </div>
+      <About />
       <Footer />
       <ScrollTop />
       <CopyRight />

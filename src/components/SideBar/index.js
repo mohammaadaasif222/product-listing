@@ -1,35 +1,31 @@
 import React from "react";
 import "./sidebar.css";
+import { useSelector } from "react-redux";
 
-const SideBar = (props) => {
+const SideBar = () => {
+  const { data } = useSelector((state) => state.data);
   return (
-    <div className="col-md-3 pt-5 pl-5">
+    <div className="col-sm-3 pt-5">
       <div className="filter-container">
         <h3 className="title pt-3">Filter</h3>
         <hr />
-        {props.data.filters
-          ? props.data.filters.map((item, index) => {
+        {data.result.filters.map((item, index) => {
               return (
-                <>
+                <><div className="filter-holder">
                   <label className="filters" key={index}>
                     {item.filter_lable}
                   </label>
-                  <select key={index + 1}>
-                    {props.data.filters.options
-                      ? props.data.filters.options.map((item, index) => {
-                          return (
-                            <option value={item.value} key={index + 2}>
-                              {item.value}
-                            </option>
-                          );
-                        })
-                      : null}
+                  <select className="fliter-select" key={Date.now()}>
+                    {data.result.filters.options ? data.result.filters.options.map((item , index)=>{
+                     <option key={index+Date.now()} value={item.value}>{item.value}</option>
+                    }) : null}
                   </select>
                   <hr />
+                  </div>
                 </>
               );
             })
-          : null}
+          }
       </div>
     </div>
   );
