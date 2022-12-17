@@ -8,9 +8,6 @@ const Card = (props) => {
       <img
         className="img"
         src={props.children.image}
-        onClick={() => {
-          props.onSelect(props.children.id_product);
-        }}
         alt={props.children.name}
       ></img>
       <div className="details p-2">

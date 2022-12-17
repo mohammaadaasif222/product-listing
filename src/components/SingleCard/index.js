@@ -8,6 +8,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../../redux/features/dataSlice";
 import { useParams } from "react-router-dom";
 import "./single.css";
+import { Container, Row } from "react-bootstrap";
+import Card from "../Main/Card";
 
 const SingleCard = () => {
   const param = useParams();
@@ -76,8 +78,8 @@ const SingleCard = () => {
               <span className="data">{selectedProduct.fabric_family}</span>
               <hr />
             </li>
-            </ul>
-            <ul className="product-data">
+          </ul>
+          <ul className="product-data">
             <li>
               <span className="text-muted lable-text">Fabric Detail</span>
               <br />
@@ -90,8 +92,8 @@ const SingleCard = () => {
               <span className="data">{selectedProduct.neck}</span>
               <hr />
             </li>
-            </ul>
-            <ul className="product-data">
+          </ul>
+          <ul className="product-data">
             <li>
               <span className="text-muted lable-text">Sleeve</span>
               <br />
@@ -107,6 +109,16 @@ const SingleCard = () => {
           </ul>
         </div>
       </div>
+<hr/>
+      <Container >
+        <Row>
+          <h2 className="text-center similar-pr">SIMILAR PRODUCTS</h2>
+          {selectedProduct.similar_products.map((item, index) => (
+            <Card key={index}>{item}</Card>
+          ))}
+        </Row>
+      </Container>
+
       <About />
       <Footer />
       <ScrollTop />
