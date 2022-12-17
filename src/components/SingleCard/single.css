@@ -1,0 +1,14 @@
+.product-title{
+    font-size: 25px;
+    letter-spacing: .5px;
+    color: #333;
+    text-transform: none;
+}
+.product-sku{
+    font-size: 13px;
+    color: #333;
+    margin: 4px 0;
+}
+.font-medium{
+ font-weight: bold;
+}

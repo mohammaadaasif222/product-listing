@@ -14,7 +14,7 @@ const Card = (props) => {
         alt={props.children.name}
       ></img>
       <div className="details p-2">
-        <Link to="/single-card" className="product-name">
+        <Link to={`single/${props.children.id_product}`} className="product-name">
           {props.children.name}
         </Link>
         <p className="product-price m-0">Rs. {props.children.price}</p>
