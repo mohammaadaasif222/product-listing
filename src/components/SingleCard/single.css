@@ -12,3 +12,43 @@
 .font-medium{
  font-weight: bold;
 }
+.product-pr{
+    font-size: 22px;
+}
+.mrp-msg{
+    font-size: 11px;
+    position: relative;
+    top: 0
+}
+.desc{
+    font-size: 16px;
+    font-weight: 700;
+}
+.desc-data{
+    font-size: 14px;
+}
+.product-data li{
+    width: 40%;
+    margin-left: 0;
+    margin-right: 2rem
+
+}
+.product-data{
+   padding: 0%;
+}
+
+.lable-text{
+    font-size: 12px;
+}
+.data{
+    font-size: 15px;
+}
+.input-width{
+    width: 3rem;
+    height: 2.4rem;
+    margin: 0 .5rem;
+    text-align: center;
+}
+.btn{
+    border-radius: 0 !important;
+}

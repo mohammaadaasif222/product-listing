@@ -11,7 +11,7 @@ const About = () => {
     <hr/>
       <div className="container-fluid">
         <div className="about-content">
-         {data.result.description}
+          {document.getElementsByClassName('about-content').innerHTML = data.result.description }
         </div>
       </div>
       <div className="container-fluid p-5">
