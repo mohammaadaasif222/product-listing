@@ -15,7 +15,6 @@ const SingleCard = () => {
   const param = useParams();
 
   const { data, loading } = useSelector((state) => state.data);
-  const [selected, setSelected] = useState([]);
 
   const dispatch = useDispatch();
 
@@ -50,11 +49,11 @@ const SingleCard = () => {
             alt={selectedProduct.name}
           ></img>
         </div>
-        <div className="col-md-6 mt-5 pl-5">
+        <div className="col-md-6 mt-5 child-pr-detail">
           <h1 className="product-title d-flex">{selectedProduct.name}</h1>
           <p className="product-sku d-flex">
             <span className="font-medium">SKU : </span>
-            <span>{selectedProduct.sku}</span>
+            <span className="pl-1">{selectedProduct.sku}</span>
           </p>
           <h2 className="product-pr">Rs.{selectedProduct.price}</h2>
           <p className="mrp-msg text-muted">MRP (inclusive of all taxes)</p>
@@ -109,8 +108,8 @@ const SingleCard = () => {
           </ul>
         </div>
       </div>
-<hr/>
-      <Container >
+      <hr />
+      <Container>
         <Row>
           <h2 className="text-center similar-pr">SIMILAR PRODUCTS</h2>
           {selectedProduct.similar_products.map((item, index) => (
@@ -118,7 +117,6 @@ const SingleCard = () => {
           ))}
         </Row>
       </Container>
-
       <About />
       <Footer />
       <ScrollTop />
