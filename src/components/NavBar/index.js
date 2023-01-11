@@ -4,11 +4,14 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { BsCart3, BsPerson} from "react-icons/bs";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { useSelector } from "react-redux";
 import React from 'react'
 
 import "./NavBar.css";
 
 function NavBar() {
+
+  const items = useSelector((state)=>state.cart)
   return (
     <Navbar className="bor-der p-3 nav-fix" expand="lg">
       <Container fluid>
@@ -98,7 +101,7 @@ function NavBar() {
           </div>
           <span className="user">Login</span>
           <BsCart3 className="nav-icon" />
-          <span className="user">Cart</span>
+          <span className="user">Cart:{items.length} </span>
         </Navbar.Collapse>
       </Container>
     </Navbar>

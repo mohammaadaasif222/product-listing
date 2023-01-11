@@ -1,5 +1,5 @@
 import HomePage from "./components/HomePage";
-import SingleCard from "./components/SingleCard";
+import SingleCard from './components/SingleCard'
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
