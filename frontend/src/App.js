@@ -13,8 +13,8 @@ function App() {
         <Route path="/">
           <Route index element={<HomePage />} />
           <Route path="/single/:productID" element={<SingleCard />} />
-          <Route path="signup" element={<SignUp />} />
-          <Route path="signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
         </Route>
       </Routes>
     </Router>
