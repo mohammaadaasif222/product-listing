@@ -5,6 +5,8 @@ import Navbar from "react-bootstrap/Navbar";
 import { BsCart3,BsPerson} from "react-icons/bs";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useSelector } from "react-redux";
+
+import { Link } from "react-router-dom";
 import React from 'react'
 
 import "./NavBar.css";
