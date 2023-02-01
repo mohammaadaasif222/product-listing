@@ -10,17 +10,17 @@ import { useParams } from "react-router-dom";
 import "./single.css";
 import { Container, Row } from "react-bootstrap";
 import Card from "../Main/Card";
-import add from "../../redux/features/cartSlice";
+import {addToCart} from "../../redux/features/cartSlice";
 import { increment,decrement } from "../../redux/features/counterSlice";
 
 
 const SingleCard = () => {
   const param = useParams();
 
-  const { data } = useSelector((state) => state.data);
+  const dispatch = useDispatch();
+  const { data}  = useSelector((state) => state.data);
   const counter = useSelector((state)=> state.counter.value)
 
-  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getData());
@@ -33,11 +33,9 @@ const SingleCard = () => {
     (item) => item.id_product === param.productID
   );
 
-  const handleAdd = (selectedProduct) => {
-    dispatch(add(selectedProduct));
-    // console.log(selectedProduct);
-  };
-
+ const cartHandler=()=>{
+  dispatch(addToCart())
+ }
   const incrementCount=()=>{
    dispatch(increment())
   }
@@ -82,7 +80,7 @@ const SingleCard = () => {
           <input className="input-width" value={counter} disabled />
           <button onClick={()=>incrementCount()} className="btn btn-outline-dark">+</button>
           <button
-            onClick={() => handleAdd()}
+            onClick={()=>cartHandler()}
             className="btn btn-danger mr-3 ml-3"
           >
             Add to Cart

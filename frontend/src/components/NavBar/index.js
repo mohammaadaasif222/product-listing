@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { BsCart3, BsPerson} from "react-icons/bs";
+import { BsCart3,BsPerson} from "react-icons/bs";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useSelector } from "react-redux";
 import React from 'react'
@@ -72,20 +72,8 @@ function NavBar() {
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Plus sizes" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="Size" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link href="/signup">Sign Up</Nav.Link>
+            <Nav.Link href="/signin">Sign In</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -97,9 +85,8 @@ function NavBar() {
             {/* <BsSearch className='nav-icon'/> */}
           </Form>
           <div>
-            <BsPerson className="nav-icon" />
+            <BsPerson className="nav-icon"><Nav.Link href="/signup"/></BsPerson>
           </div>
-          <span className="user">Login</span>
           <BsCart3 className="nav-icon" />
           <span className="user">Cart:{items.length} </span>
         </Navbar.Collapse>
