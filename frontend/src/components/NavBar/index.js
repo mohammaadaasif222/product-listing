@@ -72,8 +72,8 @@ function NavBar() {
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link to="signup">Sign Up</Nav.Link>
-            <Nav.Link to="signin">Sign In</Nav.Link>
+            <Link to="signup">Sign Up</Link>
+            <Link to="signin">Sign In</Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
