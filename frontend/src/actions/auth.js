@@ -3,7 +3,7 @@ import cookie from 'js-cookie';
 
 
 export const signup = user => {
-    return fetch(`http://localhost:8000/signup`, {
+    return fetch(`https://backendserver.netlify.app/signup`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -18,7 +18,7 @@ export const signup = user => {
 };
 
 export const signin = user => {
-    return fetch(`http://localhost:8000/signin`, {
+    return fetch(`https://backendserver.netlify.app/signin`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
